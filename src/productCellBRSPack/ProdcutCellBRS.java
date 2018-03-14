@@ -99,18 +99,20 @@ public class ProdcutCellBRS {
 	public void checkOutClubItem() throws Exception {
 		System.out.println("------------------------ CLUB ITEM Test Case -----------------------------");
 		
-		int n = 0;
+		int n = 2;
 		
 		for ( int i = 0 ; i <= n; i++){
 			String search = "CLUB";
+			String arrSite[] = { "https://www.harryanddavid.com","https://www.wolfermans.com","https://www.stokcyards.com"}; 
+			String arrItem[] = {"Signature Classic Fruit Club","Bakery Favorites Club",""};
 //			String homeHD = "https://www.harryanddavid.com";
-			String homeWF = "https://www.wolfermans.com";
+//			String homeWF = "https://www.wolfermans.com";
 //			String homeSY = "https://www.stokcyards.com";
-			String itemHD = "Signature Classic Fruit Club";
-			String itemWF = "Bakery Favorites Club";
-			String itemSY = "";
+//			String itemHD = "Signature Classic Fruit Club";
+//			String itemWF = "Bakery Favorites Club";
+//			String itemSY = "";
 			String item = "";
-			
+//			
 			System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
 			ChromeOptions  options = new ChromeOptions();
 			options.addArguments("start-maximized");
@@ -118,19 +120,19 @@ public class ProdcutCellBRS {
 	 	    callBrowser();
 			deleteCookies();
 		    
-			goToHome(driver, homeWF);
+			goToHome(driver, arrSite[i]);
 		    System.out.println("GOTO_Home_Page_"+this.getPage());
 			search(driver,search);
 		    //goToCollection(driver, collection);
 		    System.out.println("GOTO_Collection_Page_"+this.getPage());
 		    if (this.getPage().contains("HND")) {
-		    	item = itemHD;
+		    	item= arrItem[0];
 		    }
 		    else if (this.getPage().contains("WLF")) {
-		    	item = itemWF;
+		    	item = arrItem[1];
 		    } 
 		    else {
-		    	item = itemSY;
+		    	item = arrItem[2];
 		    }
 	
 		    
