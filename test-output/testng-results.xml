@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19400" started-at="2018-03-09T22:54:07Z" finished-at="2018-03-09T22:54:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19400" started-at="2018-03-09T22:54:07Z" finished-at="2018-03-09T22:54:27Z">
+      <class name="productCellBRSPack.ProdcutCellBRS">
+        <test-method status="PASS" signature="checkOutClubItem()[pri:0, instance:productCellBRSPack.ProdcutCellBRS@66d2e7d9]" name="checkOutClubItem" duration-ms="19362" started-at="2018-03-09T17:54:07Z" finished-at="2018-03-09T17:54:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOutClubItem -->
+      </class> <!-- productCellBRSPack.ProdcutCellBRS -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
