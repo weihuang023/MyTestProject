@@ -99,7 +99,7 @@ public class ProdcutCellBRS {
 	public void checkOutClubItem() throws Exception {
 		System.out.println("------------------------ CLUB ITEM Test Case -----------------------------");
 		
-		int n = 2;
+		int n = 1;
 		
 		for ( int i = 0 ; i <= n; i++){
 			String search = "CLUB";
@@ -154,7 +154,9 @@ public class ProdcutCellBRS {
 	    driver.manage().window().setPosition(new Point(-1000, 0));
 	    Thread.sleep(5000);
 	    //.bx-close-x-adaptive
-	    driver.findElement(By.className("bx-close-xstroke")).click();
+	    if (driver.findElement(By.className("bx-close-xstroke")).isEnabled()) {
+	    		driver.findElement(By.className("bx-close-xstroke")).click();
+	    	}
 	}
 	//Search
 	public void search(WebDriver driver, String searchTerm){
